@@ -163,22 +163,24 @@
 
 .whats-new {
   padding: 40px 20px;
+  width: 95%;
 }
 
 
 .new-header{
   display: flex;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 25px;
   color: #262E19;
+  padding-bottom: 50px;
+  justify-content: space-between;
 }
 
 .Shop-all-products{
   font-weight: 400;
-  font-size: 30px;
+  font-size: 25px;
   color: #262E19;
 }
-
 
 
 .whats-new-products{
@@ -195,5 +197,12 @@
 }
 
 .product-name {
-  
+  font-size: 15px;
+  padding-top: 10px;
+}
+
+.product-price {
+  font-size: 15px;
+  font-weight: 600;
+  padding-top: 10px;
 }
