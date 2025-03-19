@@ -161,7 +161,13 @@
   }
 }
 
+.whats-new {
+  padding: 40px 20px;
+}
+
+
 .new-header{
+  display: flex;
   font-weight: 400;
   font-size: 30px;
   color: #262E19;
@@ -171,12 +177,23 @@
   font-weight: 400;
   font-size: 30px;
   color: #262E19;
-  
 }
+
+
 
 .whats-new-products{
   display: flex;
   gap: 20px;
   overflow-x: auto;
+ 
 }
 
+.whats-new-products-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-name {
+  
+}
