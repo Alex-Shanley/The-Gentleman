@@ -79,3 +79,28 @@
 /*logo responsive*/
 
 /*logo end*/
+
+.sub_hero {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.promo {
+  position: relative;
+  width: 30%;
+}
+
+.promo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.promo button {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  
+}
