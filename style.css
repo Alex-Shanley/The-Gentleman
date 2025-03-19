@@ -82,6 +82,7 @@
 
 .sub_hero {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
   margin-left: 20px;
@@ -90,6 +91,7 @@
 
 .promo {
   position: relative;
+  min-width: 250px;
 }
 
 .promo img {
@@ -106,6 +108,7 @@
   background-color: white;
   color: #181616;
   border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
   padding: 12px 20px;
   cursor: pointer;
 }
@@ -118,3 +121,14 @@
   background-color: #181616;
   margin-top: 5px; 
 }
+
+.promo button:hover {
+  background-color: #262E19;
+  color: #FFFBF2;
+}
+
+
+.promo button:hover::after {
+  background-color: #FFFBF2;
+}
+
