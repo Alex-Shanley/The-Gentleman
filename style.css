@@ -54,7 +54,7 @@
 
 .hero-logo {
   position: absolute; 
-  top: 40%; 
+  top: 50%; 
   left: 50%; 
   transform: translate(-50%, -50%); 
   max-width: 720px; 
@@ -169,7 +169,7 @@
 
 .new-header{
   display: flex;
-  font-weight: 400;
+  font-weight: 450;
   font-size: 25px;
   color: #262E19;
   padding-bottom: 50px;
@@ -178,22 +178,27 @@
 
 .Shop-all-products{
   font-weight: 400;
-  font-size: 25px;
+  font-size: 20px;
   color: #262E19;
 }
 
+.carousel{
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
 
 .whats-new-products{
   display: flex;
   gap: 20px;
-  overflow-x: auto;
  
 }
 
 .whats-new-products-card img {
   width: 100%;
-  height: auto;
+  height: 700px;
   display: block;
+  
 }
 
 .product-name {
