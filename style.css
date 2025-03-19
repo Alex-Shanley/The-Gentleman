@@ -18,15 +18,16 @@
   .home {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     background-image: url('Images/Hero image.png'); 
-    background-size: contain; 
+    background-size: cover; 
     background-position: center top;  
     background-repeat: no-repeat;
+    
 }
 
 /*Home responsive*/
@@ -80,18 +81,25 @@
 
 /*logo end*/
 
+/*PROMO CARD START*/
+
+
 .sub_hero {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  
 }
 
 .promo {
   position: relative;
+  width: 30%;
   min-width: 250px;
+  
 }
 
 .promo img {
@@ -130,5 +138,45 @@
 
 .promo button:hover::after {
   background-color: #FFFBF2;
+}
+
+/*PROMO CARD END*/
+
+/*PROMO CARD RESPONSIVE START*/
+
+@media (max-width:1024px) {
+  .promo {
+    width: 45%;
+  }
+  
+}
+
+@media (max-width:768px) {
+  .promo {
+    width: 100%;
+  }
+  .sub_hero {
+    gap: 20px;
+    
+  }
+}
+
+.new-header{
+  font-weight: 400;
+  font-size: 30px;
+  color: #262E19;
+}
+
+.Shop-all-products{
+  font-weight: 400;
+  font-size: 30px;
+  color: #262E19;
+  
+}
+
+.whats-new-products{
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
 }
 
