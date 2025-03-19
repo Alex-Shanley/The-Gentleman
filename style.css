@@ -9,6 +9,10 @@
     transition: all .2s linear;
   }
 
+  body {
+    background-color: #FFFBF2;  
+  }
+
 /*Home Start*/
 
   .home {
