@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+
 *{
     font-family: "Montserrat", sans-serif;
     margin: 0; padding: 0;
@@ -198,7 +202,7 @@
   width: 100%;
   height: 700px;
   display: block;
-  
+  object-fit: cover;
 }
 
 .product-name {
@@ -210,4 +214,20 @@
   font-size: 15px;
   font-weight: 600;
   padding-top: 10px;
+}
+
+.seasons{
+  background: url(Images/Summer\ collection.png);
+  width: 94%;
+  height: 80vh;
+  background-size: cover; 
+  background-repeat: no-repeat;
+}
+
+
+
+.seasons-showcase h1 {
+  color: #FFFBF2;
+  font-family: "Libre Baskerville", serif;
+  font-size: 80px;
 }
