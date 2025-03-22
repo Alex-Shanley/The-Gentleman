@@ -187,13 +187,24 @@
 .carousel{
   display: flex;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+  width: 100%;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; 
 }
 
 .whats-new-products{
   display: flex;
   gap: 20px;
  
+}
+
+.whats-new-products-card {
+  flex: 0 0 calc(25% - 15px);
 }
 
 .whats-new-products-card img {
@@ -230,7 +241,7 @@
 
 .seasons-showcase h1 {
   text-align: left;
-  margin-left: 300px;
+  
   color: #FFFBF2;
   font-family: 'Literata', serif;
   font-size: 95px;
@@ -247,10 +258,10 @@
 }
 
 .seasons-showcase p{
-  width: 30%;
+  width: 40%;
   color: #FFFBF2;
   text-align: left;
-  
+  padding-bottom: 15px;
   line-height: 1.5;
   font-weight: 600;
 }
@@ -288,4 +299,35 @@
 
 .seabtn:hover::after {
   background-color: #FFFBF2;
+}
+
+.nav {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.left-btn {
+  background-color: #FFFBF2;
+  font-size: 15px;
+  color: #262E19;
+  padding: 12px 15px;
+  stroke: none;
+  border: #262E19;
+}
+
+.right-btn {
+  background-color: #FFFBF2;
+  font-size: 15px;
+  color: #262E19;
+  padding: 12px 15px;
+  stroke: none;
+  border: #262E19;
+}
+
+.counter {
+  color: #262E19;
+  font-size: 15px;
 }
