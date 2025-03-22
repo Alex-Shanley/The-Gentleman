@@ -1,37 +1,59 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const carousel = document.querySelector(".carousel");
-    const leftButton = document.querySelector(".left-btn");
-    const rightButton = document.querySelector(".right-btn");
-    const counter = document.querySelector(".counter");
-    
-    const cards = document.querySelectorAll(".whats-new-products-card"); 
-    const visibleCards = 4;
-    const totalCards = cards.length; 
-    const cardWidth = cards[0].offsetWidth + 20; 
-    let currentIndex = 0; 
+    function setupCarousel(sectionClass, cardClass) {
+        const section = document.querySelector(`.${sectionClass}`);
+        if (!section) return;
 
-    
-    function updateCounter() {
-        let end = Math.min(currentIndex + visibleCards, totalCards);
-        counter.textContent = `${end} of ${totalCards} `;
+        const carousel = section.querySelector(".carousel");
+        const leftButton = section.querySelector(".left-btn");
+        const rightButton = section.querySelector(".right-btn");
+        const counter = section.querySelector(".counter");
+        const cards = section.querySelectorAll(`.${cardClass}`);
+
+        const visibleCards = 4;
+        const totalCards = cards.length;
+        if (totalCards === 0) return;
+
+        const cardWidth = cards[0].offsetWidth + 115; 
+        let currentIndex = 0;
+
+        function updateCounter() {
+            let end = Math.min(currentIndex + visibleCards, totalCards);
+            counter.textContent = `${end} of ${totalCards}`;
+        }
+
+        function scrollToIndex(index) {
+            const scrollPosition = index * cardWidth;
+            carousel.scrollTo({ left: scrollPosition, behavior: "smooth" });
+        }
+
+        rightButton.addEventListener("click", function () {
+            if (currentIndex + visibleCards < totalCards) {
+                currentIndex += 1;
+                scrollToIndex(currentIndex);
+                updateCounter();
+            }
+        });
+
+        leftButton.addEventListener("click", function () {
+            if (currentIndex > 0) {
+                currentIndex -= 1;
+                scrollToIndex(currentIndex);
+                updateCounter();
+            }
+        });
+
+        carousel.addEventListener("scroll", function () {
+            let closestIndex = Math.round(carousel.scrollLeft / cardWidth);
+            if (closestIndex !== currentIndex) {
+                currentIndex = closestIndex;
+                updateCounter();
+            }
+        });
+
+        updateCounter();
     }
 
-    rightButton.addEventListener("click", function () {
-        if (currentIndex + visibleCards < totalCards) {
-            currentIndex += 1;
-            carousel.scrollBy({ left: cardWidth, behavior: "smooth" });
-            updateCounter();
-        }
-    });
-
-    leftButton.addEventListener("click", function () {
-        if (currentIndex > 0) {
-            currentIndex -= 1;
-            carousel.scrollBy({ left: -cardWidth, behavior: "smooth" });
-            updateCounter();
-        }
-    });
-
-    
-    updateCounter();
+    setupCarousel("whats-new", "whats-new-products-card");
+    setupCarousel("best-sellers", "best-sellers-products-card");
 });
+
