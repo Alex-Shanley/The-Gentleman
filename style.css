@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Ephesis&family=Great+Vibes&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Tangerine:wght@400;700&display=swap');
 
 *{
     font-family: "Montserrat", sans-serif;
@@ -222,16 +220,47 @@
   height: 80vh;
   background-size: cover; 
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  text-align: center;
+  position: relative;
 }
-
 
 
 .seasons-showcase h1 {
+  text-align: left;
+  margin-left: 300px;
   color: #FFFBF2;
-  font-family: "Libre Baskerville", serif;
-  font-size: 80px;
+  font-family: 'Literata', serif;
+  font-size: 95px;
+  font-weight: 200;
 }
 
 .seasons-showcase h1 span {
-  
+  color: #FFFBF2;
+  text-align: left;
+  font-family: 'Great Vibes', cursive;
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 7px;
+}
+
+.seasons-showcase p{
+  width: 30%;
+  color: #FFFBF2;
+  text-align: left;
+  margin-left: 300px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+
+.seabtn {
+  background-color: white;
+  color: #181616;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  padding: 12px 20px;
+  cursor: pointer;
 }
