@@ -271,7 +271,7 @@
 
 
 .icon:hover {
-  background: black;
+  background: #262E19;
   transform: scale(1.1);
 }
 
@@ -283,6 +283,31 @@
 .product-image-container:hover .hover-icons {
   opacity: 1;
 }
+
+.hover-icons {
+  position: absolute;
+  top: 10px; 
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+.icon {
+  width: 50px; 
+  height: 50px;
+  background: #FFFBF2; 
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+ 
+}
+
 
 
 /*whats new  end*/
@@ -364,31 +389,123 @@
 }
 
 
+@media screen and (max-width: 1100px) {
+  .seasons {
+    height: auto;
+    background-position: right;
+  }
+
+  .seasons-showcase {
+    margin: 0;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+  }
 
 
+  .seasons-showcase h1 {
+    font-size: 30px;
+   text-align: center;
+   font-size: 60px;
+   line-height: 0.7;
+   padding-bottom: 20px;
 
-.hover-icons {
-  position: absolute;
-  top: 10px; 
-  right: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  }
+
+  .seasons-showcase p {
+    width: 100%;
+    font-size: 12px;
+   padding-top: 0;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .seabtn {
+    padding: 8px 12px;
+    
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .seasons {
+    height: auto;
+    background-position: right;
+  }
+
+  .seasons-showcase{
+    margin: 0px;
+    height: 80vh;
+    justify-content: center;
+    align-content: center;
+    
+  }
+
+
+  .seasons-showcase h1 {
+    font-size: 30px;
+   text-align: center;
+   font-size: 60px;
+   line-height: 0.7;
+   padding-bottom: 20px;
+
+  }
+
+  .seasons-showcase p {
+    width: 100%;
+    font-size: 12px;
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  .seabtn {
+    padding: 8px 12px;
+    
+  }
 }
 
 
-.icon {
-  width: 50px; 
-  height: 50px;
-  background: #FFFBF2; 
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
- 
+@media screen and (max-width: 480px) {
+  .seasons {
+    height: auto;
+    background-position: right;
+  }
+
+  .seasons-showcase{
+    margin: 0px;
+    height: 80vh;
+    justify-content: center;
+    align-content: center;
+    
+  }
+
+
+  .seasons-showcase h1 {
+    font-size: 30px;
+   text-align: center;
+   font-size: 60px;
+   line-height: 0.7;
+   padding-bottom: 20px;
+
+  }
+
+  .seasons-showcase p {
+    width: 100%;
+    font-size: 12px;
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  .seabtn {
+    padding: 8px 12px;
+    
+  }
 }
+
+
+
 
 
