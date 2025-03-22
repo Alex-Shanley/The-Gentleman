@@ -250,17 +250,42 @@
   width: 30%;
   color: #FFFBF2;
   text-align: left;
-  margin-left: 300px;
+  
   line-height: 1.5;
   font-weight: 600;
 }
 
+.seasons-showcase {
+  text-align: left;  
+  margin-left: 300px;
+}
 
 .seabtn {
+  margin-left: 0;
   background-color: white;
   color: #181616;
   border: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
   padding: 12px 20px;
   cursor: pointer;
+}
+
+.seabtn::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #181616;
+  margin-top: 5px; 
+  transition: background-color 0.3s ease;
+}
+
+.seabtn:hover {
+  background-color: #262E19;
+  color: #FFFBF2;
+}
+
+
+.seabtn:hover::after {
+  background-color: #FFFBF2;
 }
