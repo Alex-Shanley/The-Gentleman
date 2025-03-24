@@ -16,6 +16,11 @@
   }
 
 
+  .gent-nav {
+    display: flex;
+  }
+
+
   .my-header {
     text-align: center;
     display: flex;
@@ -25,15 +30,27 @@
   }
 
 
-.my-fav{
-  max-width: 60%;
-  margin: auto;
-}
+  .my-fav {
+    width: 100%;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 100px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
 
 .my-list-text {
   font-size: 25px;
 }
 
+
+.fav-header{
+  font-size: 50px;
+  margin-top: 20px;
+}
 
 .fav-list {
   display: flex;
@@ -44,6 +61,10 @@
 .fav-item {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid #262E19;
+  padding: 60px 0;
 }
 
 
@@ -82,6 +103,7 @@
   border: none;
   cursor: pointer;
   font-size: 16px;
+  margin-left: 100px;
   
 }
 
