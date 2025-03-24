@@ -987,6 +987,7 @@
 @media screen and (max-width: 768px) {
   .questions {
     height: auto;
+    height: 80vh;
   }
 
   .questions .content {
@@ -1006,6 +1007,16 @@
   .questions .content h1 {
     font-size: 40px;
   }
+  .questions {
+    height: auto;
+    height: 80vh;
+  }
+
+  .questions .content p {
+    padding-bottom: 20px;
+  }
 }
 
 /* questions end */
+
+
