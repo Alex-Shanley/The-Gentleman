@@ -109,6 +109,8 @@ a {
   font-weight: 400;
   font-size: 23px;
   padding-bottom: 8px;
+ min-width: 550px;
+ text-transform: uppercase;
 }
 
 .price {
