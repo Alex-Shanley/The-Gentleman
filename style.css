@@ -34,6 +34,7 @@
     background-size: cover; 
     background-position: center top;  
     background-repeat: no-repeat;
+    margin-top: 80px;
     
 }
 
@@ -628,8 +629,9 @@
 
 .tall-image {
   grid-row: span 2;
-  max-height: 1140px;
+  max-height: 1060px;
   object-fit: contain;
+  
   
 }
 
