@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const favouritesContainer = document.querySelector(".my-fav");
     let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
 
+    
+    favouritesContainer.innerHTML = "";
+
     favourites.forEach(product => { 
         const favItem = document.createElement("div");
         favItem.classList.add("fav-list");
@@ -21,10 +24,10 @@ document.addEventListener('DOMContentLoaded', function () {
         favouritesContainer.appendChild(favItem);
     });
 
-    //
-    document.addEventListener("click", function (event) {
+    
+    favouritesContainer.addEventListener("click", function (event) {
         if (event.target.closest(".remove-fav")) {
-            const favItem = event.target.closest(".fav-item"); 
+            const favItem = event.target.closest(".fav-list"); 
             const productName = favItem.querySelector("h3").textContent.trim();
 
             let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
@@ -32,7 +35,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
             localStorage.setItem("favourites", JSON.stringify(favourites));
 
-            favItem.parentElement.remove(); 
+            favItem.remove(); 
+            console.log("Updated favourites:", favourites);
         }
     });
 });
