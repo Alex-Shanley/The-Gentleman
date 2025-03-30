@@ -178,25 +178,101 @@ a {
   .main-cart{
     display: flex;
     justify-content: space-between;
-    max-width: 1000px;
+    max-width: 70%;
     margin: auto;
-    margin-top: 150px;
+    margin-top: 200px;
+    padding-bottom: 80px;
+    
   }
 
   .my-cart{
     flex: 1;
-    padding: 20px;
+    margin-top: -18px;
   }
 
-  .details-section{
-    width: 40%;
+  .details-section {
+    width: 35%;
     padding: 20px;
-    border: 1px #262E19;
-  }
+    border: 1px solid #262E19;
+    margin: 20px;
+}
 
-  h2 {
-    color: #262E19;
-  }
+.subtotal, .vat, .total {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 10px 20px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subtotal span, .vat span, .total span {
+    font-weight: 500;
+}
+
+.shipping-dets {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 20px;
+}
+
+.shipping-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.shipping {
+    font-size: 16px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #262E19;
+    width: 100%;
+    margin: 10px 0;
+}
+
+
+input[type="radio"] {
+    appearance: none; 
+    width: 16px;
+    height: 16px;
+    border: 2px solid #262E19; 
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    border-color: #262E19;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 8px; 
+    height: 8px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.2s ease;
+}
+
+input[type="radio"]:checked::before {
+    background-color: #262E19; 
+}
+
+
+
+  
 
   .cart-item{
     display: flex;
@@ -209,9 +285,145 @@ a {
   .cart-item img {
     width: 60px;
     height: auto;
-    margin-right: 15px;
+    margin-right: 30px;
   }
 
   .cart-details {
     flex: 1;
   }
+
+  .cart-price{
+    font-weight: bold;
+  }
+
+  .amt-box {
+    width: 40px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.checkout-button{
+    display: block;
+    width: 100%;
+    padding: 25px;
+    background: #262E19;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 14px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+
+}
+
+
+.checkout-button::after {
+    content: "";
+    display: block; 
+    width: 45%;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 5px auto 0; 
+}
+  
+.checkout-button:hover::after {
+    background-color: #262E19; 
+}
+
+.checkout-button:hover {
+    background-color: #FFFBF2;
+    color: #262E19;
+    border: 1px solid #262E19;
+    order: 1; 
+}
+  
+
+.my-bag{
+    font-weight: 400;
+}
+
+.name {
+    font-weight: 400;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+.cart-price {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.amt-box {
+    width: 80px;
+    height: 50px;
+    text-align: center;
+    border: 1.5px solid #262E19;
+    font-size: 20px;
+    background-color: #FFFBF2;
+    margin-left: 30px;
+    margin-right: 30px;
+    
+}
+
+.delete-btn {
+    background-color: #FFFBF2;
+    border: #FFFBF2; 
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.delete-btn img {
+    width: 20px;
+    height: auto;
+    margin-right: 0;
+}
+
+.progress-container {
+    width: 70%;
+    margin: 200px auto 20px;
+    text-align: center;
+    margin-bottom: -150px;
+}
+
+.progress-text {
+    font-weight: 600;
+    color: #2d331c;
+    margin-bottom: 8px;
+}
+
+.progress-wrapper {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+
+.progress-bar {
+    flex: 1; 
+    height: 5px;
+    background-color: #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    width: 100%;
+    height: 100%;
+    background-color: #2d331c;
+}
+
+.progress-percent {
+    font-weight: bold;
+    font-size: 20px;
+    color: #2d331c;
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.page-header{
+    font-size: 20px;
+    padding-bottom: 50px;
+}

@@ -42,39 +42,86 @@
 
 
 
+
+<div class="progress-container">
+    <p class="page-header">CART &nbsp&nbsp&nbsp<img src="Images/cookies.svg" alt="cookies">&nbsp&nbsp&nbsp CHECKOUT &nbsp&nbsp&nbsp  <img src="Images/cookies.svg" alt="cookies">&nbsp&nbsp&nbsp  ORDER COMPLETE </p>
+    <div class="progress-text">You have free shipping!</div>
+    <div class="progress-wrapper">
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <div class="progress-percent">100%</div>
+    </div>
+</div>
+
 <div class="main-cart">
+    
     <div class="my-cart">
-        <h2>MY BAG</h2>
+        <h2 class="my-bag">MY BAG</h2>
+        <hr>
+
+        <!-- First Cart Item -->
         <div class="cart-item">
             <img src="Images/Hand-Tailored Wool-Cashmere Topcoat.png" alt="Hand-Tailored Wool-Cashmere Topcoat">
             <div class="cart-details">
-                <p><strong>HAND-TAILORED WOOL-CASHMERE TOPCOAT</strong></p>
-                    <p>Size: S</p>
+                <p class="name">HAND-TAILORED WOOL-CASHMERE TOPCOAT</p>
+                <p>Size: S</p>
             </div>
             <span class="cart-price">€4,950.00</span>
             <input type="number" class="amt-box" value="1">
+            <span class="cart-price">€4,950.00</span>
+            <button class="delete-btn"><img src="Images/Bin Icon.svg" alt="Delete Item"></button>
         </div>
+        <hr>
+
+        <!-- Second Cart Item -->
+        <div class="cart-item">
+            <img src="Images/Hand-Tailored Wool-Cashmere Topcoat.png" alt="Hand-Tailored Wool-Cashmere Topcoat">
+            <div class="cart-details">
+                <p class="name">HAND-TAILORED WOOL-CASHMERE TOPCOAT</p>
+                <p>Size: S</p>
+            </div>
+            <span class="cart-price">€4,950.00</span>
+            <input type="number" class="amt-box" value="1">
+            <span class="cart-price">€4,950.00</span>
+            <button class="delete-btn"><img src="Images/Bin Icon.svg" alt="Delete Item"></button>
+        </div>
+        <hr>
     </div>
 
+    <!-- Order Summary Section -->
     <div class="details-section">
-        <h3>Subtotal<span style="float: right;">€4,950.00</span></h3>
+        <h3 class="subtotal">Subtotal <span style="float: right;">€4,950.00</span></h3>
         <hr>
-        <h3>Shipping</h3>
-        <input type="radio" checked> Free shipping<br>
-        <input type="radio"> Flat rate: €10<br>
-        <input type="radio"> Local pickup: €10<br>
-        <p>Shipping to: Alex</p>
-        <a href="#">Change address</a>
-        <hr>
-        <h3>VAT<span style="float: right;">€0.00</span></h3>
-        <hr>
-        <h3>Total<span style="float: right;">€4,950.00</span></h3>
+
+        <div class="shipping-dets">
+            <h3 class="shipping">Shipping</h3>
+            
+            <label class="shipping-option">
+                <input type="radio" name="shipping" checked> Free shipping
+            </label>
+            <label class="shipping-option">
+                <input type="radio" name="shipping"> Flat rate: €10
+            </label>
+            <label class="shipping-option">
+                <input type="radio" name="shipping"> Local pickup: €10
+            </label>
+        
+            <p>Shipping to: <strong>Alex</strong></p>
+            <a href="#">Change address</a>
+            <hr>
+        </div>
+        
+        <h3 class="vat">VAT <span style="float: right;">€0.00</span></h3>
+        <h3 class="total">Total <span style="float: right;">€4,950.00</span></h3>
+        
         <button class="checkout-button">PROCEED TO CHECKOUT</button>
-
-
     </div>
 
 </div>
+
+
+
 
    
 <!--Questions-->
@@ -98,7 +145,7 @@
 
 
 
-<script src="fav.js"></script>
+<script src="Gent.js"></script>
 
   </body>
 </html>

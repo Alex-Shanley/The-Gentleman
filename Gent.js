@@ -55,36 +55,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setupCarousel("whats-new", "whats-new-products-card");
     setupCarousel("best-sellers", "best-sellers-products-card");
-});
 
-function setupWishlist() {
-    document.querySelectorAll(".hover-icons .icon img[alt='star']").forEach(star => {
-        star.addEventListener("click", function () {
-            const productCard = this.closest(".whats-new-products-card, .best-sellers-products-card");
-            const productName = productCard.querySelector (".product-name") .textContent;
-            const productPrice = productCard.querySelector (".product-price") .textContent;
-            const productImage = productCard.querySelector("img").src;
+    function setupWishlist() {
+        document.querySelectorAll(".hover-icons .icon img[alt='star']").forEach(star => {
+            star.addEventListener("click", function () {
+                const productCard = this.closest(".whats-new-products-card, .best-sellers-products-card");
+                const productName = productCard.querySelector(".product-name").textContent;
+                const productPrice = productCard.querySelector(".product-price").textContent;
+                const productImage = productCard.querySelector("img").src;
 
-            let favourites = JSON.parse (localStorage.getItem ("favourites")) || [];
+                let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
 
-            if (favourites.some(item => item.name === productName)) {
-                alert("Looks like you already favoured this");
-                return;
-            }
+                if (favourites.some(item => item.name === productName)) {
+                    alert("Looks like you already favoured this");
+                    return;
+                }
 
-            favourites.push({
-                name: productName,
-                price: productPrice,
-                image: productImage,
-                date: new Date().toLocaleDateString("en-UK", {month:"long", day:"numeric", year: "numeric"})
-            });
+                favourites.push({
+                    name: productName,
+                    price: productPrice,
+                    image: productImage,
+                    date: new Date().toLocaleDateString("en-UK", { month: "long", day: "numeric", year: "numeric" })
+                });
 
-                localStorage.setItem("favourites", JSON.stringify (favourites));
-                alert ("Added to favourites");
-
+                localStorage.setItem("favourites", JSON.stringify(favourites));
+                alert("Added to favourites");
             });
         });
     }
-    
+
     setupWishlist();
 
+   
+
+    
+
+       
+    
+    
