@@ -118,6 +118,12 @@ document.addEventListener("DOMContentLoaded", function () {
     setupAddToCart();
 });
 
-const cartItemsContainer
+const cartItemsContainer = document.querySelector(".my-cart");
+
+const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+cartItemsContainer.innerHTML = "";
+
+
 
     
