@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const totalCards = cards.length;
         if (totalCards === 0) return;
 
-        const cardWidth = cards[0].offsetWidth + 115; 
+        const cardWidth = cards[0].offsetWidth + 115;
         let currentIndex = 0;
 
         function updateCounter() {
@@ -86,10 +86,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setupWishlist();
 
-   
+    function setupAddToCart() {
+        document.querySelectorAll(".hover-icons .icon img[alt='bag']").forEach(cartIcon => {
+            cartIcon.addEventListener("click", function () {
+                const productCard = this.closest(".whats-new-products-card, .best-sellers-products-card");
+                const productName = productCard.querySelector(".product-name").textContent;
+                const productPrice = productCard.querySelector(".product-price").textContent;
+                const productImage = productCard.querySelector("img").src;
 
-    
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-       
-    
+                const existingItemIndex = cart.findIndex(item => item.name === productName);
+                if (existingItemIndex !== -1) {
+                    alert("This product is already in your cart.");
+                    return;
+                }
+
+                cart.push({
+                    name: productName,
+                    price: productPrice,
+                    image: productImage,
+                    quantity: 1
+                });
+
+                localStorage.setItem("cart", JSON.stringify(cart));
+                alert("Added to cart");
+            });
+        });
+    }
+
+    setupAddToCart();
+});
+
+const cartItemsContainer
+
     
