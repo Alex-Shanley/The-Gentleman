@@ -164,4 +164,12 @@ cartItems.forEach(item => {
 });
 
 
-cartItemsContainer.addEventListener("click, function")
+cartItemsContainer.addEventListener("click", function (event) {
+    if (event.target.closest(".delete-btn")) {
+        const cartItem = event.target.closest(".cart-item");
+        const itemName = cartItem.querySelector(".name").textContent.trim();
+    const updatedCart = cartItems.filter(item => item.name)
+
+
+    }
+}
