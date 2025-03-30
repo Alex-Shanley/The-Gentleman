@@ -125,5 +125,43 @@ const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
 cartItemsContainer.innerHTML = "";
 
 
+const myCartContainer = document.createElement('div');
+myCartContainer.classList.add('my-cart');
 
+
+myCartContainer.innerHTML = `
+    <h2 class="my-bag">MY BAG</h2>
+    <hr>
+`;
+
+
+cartItemsContainer.appendChild(myCartContainer);
+
+
+cartItems.forEach(item => {
+    const itemElement = document.createElement("div");
+    itemElement.classList.add("cart-item");
     
+    
+    const itemPrice = parseFloat(item.price.replace('€', '').replace(',', '')); 
+    const totalPrice = (itemPrice * item.quantity).toFixed(2); 
+    
+    
+    itemElement.innerHTML = `
+        <img src="${item.image}" alt="${item.name}">
+        <div class="cart-details">
+            <p class="name">${item.name}</p>
+            <p>Size: ${item.size || 'S'}</p>
+        </div>
+        <span class="cart-price">${item.price}</span>
+        <input type="number" class="amt-box" value="${item.quantity}">
+        
+        <button class="delete-btn"><img src="Images/Bin Icon.svg" alt="Delete Item"></button>
+    `;
+    
+    
+    cartItemsContainer.appendChild(itemElement);
+});
+
+
+cartItemsContainer.addEventListener("click, function")
