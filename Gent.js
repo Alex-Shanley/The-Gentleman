@@ -176,17 +176,33 @@ cartItemsContainer.addEventListener("click", function (event) {
 })
 
 
-document.addEventListener("DOMContentLoaded", function()) {
-const cartItemsContainer = document.querySelector(".my-cart");
-const subtotalElement = document.querySelector(".subtotal span");
-const totalElement = document.querySelector(".total span");
-const shippingOptions = document.querySelector(".shipping-option input");
+document.addEventListener("DOMContentLoaded", function() {
+    const cartItemsContainer = document.querySelector(".my-cart");
+    const subtotalElement = document.querySelector(".subtotal span");
+    const totalElement = document.querySelector(".total span");
+    const shippingOptions = document.querySelectorAll(".shipping-option input");
 
-function updateOrderSummary(){
-    let cartItems = JSON.parse(localStorage.getItem("cart")) || []
+    function updateOrderSummary() {
+        let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
 
-    let subtotal
-}
+        let subtotal = cartItems.reduce((sum, item) => {
+            let itemPrice = parseFloat(item.price.replace("€", "").replace(",", ""));
+            return sum + itemPrice * item.quantity;
+        }, 0);
 
+        let shippingCost = 0;
+        shippingOptions.forEach(option => {
+            if (option.checked && option.nextSibling.textContent.includes("€10")) {
+                shippingCost = 10;
+            }
+        });
 
-}
+        let total = subtotal + shippingCost
+
+        subtotalElement.textContent = '€${subtotal.toFixed(2)}'
+        totalElement.textContent = '€${total.toFixed(2)}'
+    }
+
+    updateOrderSummary();
+});
+
