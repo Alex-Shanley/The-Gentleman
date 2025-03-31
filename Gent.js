@@ -204,5 +204,28 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     updateOrderSummary();
+
+    shippingOptions.forEach(option => {
+        option.addEventListener("change",updateOrderSummary);
 });
+
+cartItemsContainer.addEventListener("click", function (event) {
+    if(event.target.closest(".delete-btn")){
+        const cartItem = event.target.closet(".cart-item");
+
+        let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+        const updatedCart = cartItems.filter(item =>item.name!==itemName);
+
+        localStorage.setItem("cart", JSON.stringify(updatedCart));
+
+        cartItem.remove();
+
+        updateOrderSummary();
+
+    
+    }
+}
+
+
+
 
