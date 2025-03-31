@@ -175,3 +175,8 @@ cartItemsContainer.addEventListener("click", function (event) {
 }
 })
 
+
+document.addEventListener("DOMContentLoaded", function()) {
+const cartItemsContainer = document.querySelector
+
+}
