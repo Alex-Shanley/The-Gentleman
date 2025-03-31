@@ -177,6 +177,16 @@ cartItemsContainer.addEventListener("click", function (event) {
 
 
 document.addEventListener("DOMContentLoaded", function()) {
-const cartItemsContainer = document.querySelector
+const cartItemsContainer = document.querySelector(".my-cart");
+const subtotalElement = document.querySelector(".subtotal span");
+const totalElement = document.querySelector(".total span");
+const shippingOptions = document.querySelector(".shipping-option input");
+
+function updateOrderSummary(){
+    let cartItems = JSON.parse(localStorage.getItem("cart")) || []
+
+    let subtotal
+}
+
 
 }
