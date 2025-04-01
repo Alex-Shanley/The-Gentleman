@@ -17,6 +17,115 @@
 
 
 
+.header {
+  position: fixed; 
+  top: 0;          
+  left: 0;       
+  width: 100%;    
+  background-color: #FFFBF2;
+  z-index: 10;    
+  transition: background-color 0.4s ease-in-out, opacity 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+
+.logo-image {
+  height: 30px; 
+  width: auto;
+}
+
+
+.header ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.header li {
+  height: 50px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.header a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #2F3247;
+  transition: color 0.4s ease-in-out;
+}
+
+.header a:hover {
+  border-bottom: 3px solid #262E19;
+  color: #262E19;
+}
+
+.header li:first-child {
+  margin-right: auto;
+}
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: #FFFBF2;
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+}
+
+nav .sidebar {
+  align-items: flex-start;
+  justify-content: flex-start;
+  display: none;
+}
+
+.sidebar li {
+  width: 100%;
+}
+
+.sidebar a {
+  width: 100%;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #2F3247;
+}
+
+.sidebar a:hover {
+  background-color: #262E19;
+  color: #FFFBF2;
+}
+
+
+.menu-button {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .menu-button { 
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+ /* Cart start */
+
 
 
   
@@ -57,6 +166,7 @@
 /*Home responsive*/
 
 /*Home end*/
+
 
 /*logo Start*/
 
@@ -1020,5 +1130,165 @@
 }
 
 /* questions end */
+
+/* contact us start */
+
+.map{
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  zoom: 100%;
+  margin: auto;
+  
+}
+
+.contact-us {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 75vh; 
+  margin-top: 80px;
+  margin-top: 125px;
+  margin-bottom: 50px;
+}
+
+.cs-background h2  {
+  color: #262E19;
+  font-family: 'Literata', serif;
+  font-size: 95px;
+  font-weight: 300;
+  text-align: center;
+
+}
+
+.cs-background h2 span {
+  color: #262E19;
+  font-size: 95px;
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  
+}
+
+.cs-background h3 {
+  font-size: 18px;
+  text-align: center;
+  padding-top: 0px;
+}
+
+.cs-tex {
+  font-size: 14px;
+  text-align: center;
+}
+
+.cs-form {
+  width: 100%;
+  max-width: 1200px; 
+  height: auto;
+  margin: 40px 0; 
+}
+
+.form {
+  width: 100%;
+  border: 2px solid #262E19;
+  padding: 2rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  background-color: #FFFBF2;
+}
+
+.Message {
+  width: 100%;
+  border: 2px solid #262E19;
+  padding: 4rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  background-color: #FFFBF2;
+}
+
+.cs-form form div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 0.8rem;
+}
+
+.cs-btn {
+  display: block;
+  width: 100%;
+  padding: 35px;
+  background: #262E19;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  position: relative;
+  border: #262E19;
+}
+
+.cs-btn::after {
+  content: "";
+  display: block;
+  width: 45%;
+  height: 1px;
+  background-color: #ffffff;
+  margin: 5px auto 0;
+}
+
+.cs-btn:hover {
+  background-color: #FFFBF2;
+  color: #262E19;
+  border: 2px solid #262E19;
+}
+
+@media screen and (max-width: 1100px) {
+  .contact-us  {
+    width: 90%;
+  
+   }
+
+   .contact-us h2 {
+    font-size: 68px;
+   }
+ 
+   .cs-background h2 span {
+     font-size: 68px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-us  {
+    width: 90%;
+  
+   }
+
+   .contact-us h2 {
+    font-size: 68px;
+   }
+ 
+   .cs-background h2 span {
+     font-size: 68px;
+    }
+}
+
+@media screen and (max-width: 522px) {
+
+  .contact-us  {
+    width: 90%;
+   }
+
+  .contact-us h2 {
+   font-size: 48px;
+  }
+
+  .cs-background h2 span {
+    font-size: 48px;
+   }
+}
+
+
+
 
 

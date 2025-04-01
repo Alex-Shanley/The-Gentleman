@@ -21,29 +21,50 @@
   </head>
   <body>
 
-<header class="gent-nav">
-  <nav class="gent-left">
-    <a href="index.html">HOME</a>
-    <a href="#">SHOP</a>
-  </nav>
+    <nav class="header">
+      <ul>
+        <li class="logo">
+          <a href="index.html">
+            <img src="Images/Nav logo.svg" class="logo-image" alt="The Gentleman Logo">
+          </a>
+        </li>
+        <li class="hideOnMobile"><a href="index.html">HOME</a></li>
+        <li class="hideOnMobile"><a href="Contact.html">CONTACT</a></li>
+        <li class="hideOnMobile"><a href="#">SHOP</a></li>
+        <li class="hideOnMobile"><a href="Favourites.html">FAVOURITES</a></li>
+        <li class="hideOnMobile"><a href="cart.html">CART</a></li>
+        <li class="menu-button" onclick="showSidebar()">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+              <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+  
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+            </svg>
+          </a>
+        </li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="#">SHOP</a></li>
+        <li><a href="Favourites.html">FAVOURITES</a></li>
+        <li><a href="cart.html">CART</a></li>
+      </ul>
+    </nav>
 
-<div class="nav-logo">
-  <a href="index.html">
-    <img src="Images/Nav logo.svg" alt="the Gentleman logo">
-  </a>
-</div>
 
-<nav class="gent-right">
-  <a href="Favourites.html">FAVOURITES</a>
-  <a href="#">CART</a>
-</nav>
-
-</header>
-
-
+   
+   
 
 
 <div class="progress-container">
+  <div class="c-header"><h2>MY<SPAN> CART</SPAN></h2></div>
     <p class="page-header">CART &nbsp&nbsp&nbsp<img src="Images/cookies.svg" alt="cookies">&nbsp&nbsp&nbsp CHECKOUT &nbsp&nbsp&nbsp  <img src="Images/cookies.svg" alt="cookies">&nbsp&nbsp&nbsp  ORDER COMPLETE </p>
     <div class="progress-text">You have free shipping!</div>
     <div class="progress-wrapper">
@@ -54,7 +75,11 @@
     </div>
 </div>
 
+
+
+
 <div class="main-cart">
+ 
     
     <div class="my-cart">
         <h2 class="my-bag">MY BAG</h2>
@@ -62,7 +87,7 @@
 
         
         <div class="cart-item">
-            <img src="Images/Hand-Tailored Wool-Cashmere Topcoat.png" alt="Hand-Tailored Wool-Cashmere Topcoat">
+            <img  src="Images/Hand-Tailored Wool-Cashmere Topcoat.png" alt="Hand-Tailored Wool-Cashmere Topcoat" class="cart">
             <div class="cart-details">
                 <p class="name">HAND-TAILORED WOOL-CASHMERE TOPCOAT</p>
                 <p>Size: S</p>

@@ -25,26 +25,42 @@
 
     
     
-    <header class="gent-nav">
-      <nav class="gent-left">
-        <a href="index.html">HOME</a>
-        
-        <a href="#">SHOP</a>
-      </nav>
-    
-    <div class="nav-logo">
-      <a href="index.html">
-    <img src="Images/Nav logo.svg" alt="the Gentleman logo">
-  </a>
-    </div>
-    
-    <nav class="gent-right">
-      
-      <a href="Favourites.html">FAVOURITES</a>
-      <a href="cart.html">CART</a>
+    <nav class="header">
+      <ul>
+        <li class="logo">
+          <a href="index.html">
+            <img src="Images/Nav logo.svg" class="logo-image" alt="The Gentleman Logo">
+          </a>
+        </li>
+        <li class="hideOnMobile"><a href="index.html">HOME</a></li>
+        <li class="hideOnMobile"><a href="Contact.html">CONTACT</a></li>
+        <li class="hideOnMobile"><a href="#">SHOP</a></li>
+        <li class="hideOnMobile"><a href="Favourites.html">FAVOURITES</a></li>
+        <li class="hideOnMobile"><a href="cart.html">CART</a></li>
+        <li class="menu-button" onclick="showSidebar()">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+              <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+  
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+            </svg>
+          </a>
+        </li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="#">SHOP</a></li>
+        <li><a href="Favourites.html">FAVOURITES</a></li>
+        <li><a href="cart.html">CART</a></li>
+      </ul>
     </nav>
-    
-    </header>
 
 
 
@@ -112,7 +128,7 @@
           </div>
         </div>
         <p class="product-name">Hand-Tailored Wool-Cashmere Topcoat</p>
-        <p class="product-price">€4,950.00</p>
+        <p class="product-price">€4950.00</p>
       </div>
       <!--Hand-Tailored Wool-Cashmere Topcoat end-->
       
@@ -140,7 +156,7 @@
         </div>
       </div>
         <p class="product-name">Carleton Quilted Down Jacket</p>
-        <p class="product-price">€2,750.00</p>
+        <p class="product-price">€2750.00</p>
       </div>
       <!--Carleton Quilted Down Jacket end-->
       
@@ -154,7 +170,7 @@
         </div>
       </div>
         <p class="product-name">Hand-Tailored Cashmere-Wool Topcoat</p>
-        <p class="product-price">€3,950.00</p>
+        <p class="product-price">€3950.00</p>
       </div>
 
       <!--Johnson Twill Four-Pocket Jacket start-->
@@ -169,7 +185,7 @@
         </div>
       </div>
         <p class="product-name">Johnson Twill Four-Pocket Jacket</p>
-        <p class="product-price">€2,750.00</p>
+        <p class="product-price">€2750.00</p>
       </div>
 
 
@@ -184,7 +200,7 @@
         </div>
       </div>
         <p class="product-name">Wool-Cashmere Cardigan</p>
-        <p class="product-price">€1,550.00</p>
+        <p class="product-price">€1550.00</p>
       </div>
       <!--JWool-Cashmere Cardigan end-->
 
@@ -235,14 +251,14 @@
       <!--Kent Handmade Paisley Silk Jacket start-->
       <div class="best-sellers-products-card">
         <div class="product-image-container">
-          <img src="Images/Kent Handmade Paisley Silk Jacket.png" alt="Kent Handmade Paisley Silk Jacket">
+          <img src="Images/Kent Handmade Paisley Silk Jacket.png" alt="Kent Handmade Paisley Silk Jacket" >
           <div class="hover-icons">
             <span class="icon"><img src="Images/Shopping bag.svg" alt="bag"></span> 
             <span class="icon"><img src="Images/Star.svg" alt="star"></span> 
           </div>
         </div>
         <p class="product-name">Kent Handmade Paisley Silk Jacket</p>
-        <p class="product-price">€4,950.00</p>
+        <p class="product-price">€4950.00</p>
       </div>
       <!--Kent Handmade Paisley Silk Jacket end-->
       
@@ -256,7 +272,7 @@
         </div>
       </div>
         <p class="product-name">Hand-Tailored Linen-Blend Jacket</p>
-        <p class="product-price">€2,750.00</p>
+        <p class="product-price">€2750.00</p>
       </div>
       <!--Hand-Tailored Linen-Blend Jacket end-->
       
@@ -270,7 +286,7 @@
         </div>
       </div>
         <p class="product-name">Jeffries Stretch Waistcoat</p>
-        <p class="product-price">€1,950.00</p>
+        <p class="product-price">€1950.00</p>
       </div>
       <!--Jeffries Stretch Waistcoat end-->
       
@@ -288,7 +304,7 @@
     </div>
   </div>
     <p class="product-name">Fullerton Wool-Cashmere Peacoat</p>
-    <p class="product-price">€3,950.00</p>
+    <p class="product-price">€3950.00</p>
   </div>
   <!--Fullerton Wool-Cashmere Peacoat end-->
 
@@ -307,7 +323,7 @@
     </div>
   </div>
     <p class="product-name">Suede-Front Cashmere Cardigan</p>
-    <p class="product-price">€2,950.00</p>
+    <p class="product-price">€2950.00</p>
   </div>
   <!--Suede-Front Cashmere Cardigan end-->
 
@@ -321,7 +337,7 @@
     </div>
   </div>
     <p class="product-name">Carleton Quilted Down Gilet</p>
-    <p class="product-price">€1,750.00</p>
+    <p class="product-price">€1750.00</p>
   </div>
   <!--Carleton Quilted Down Gilet end-->
    

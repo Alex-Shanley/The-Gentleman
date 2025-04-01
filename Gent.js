@@ -164,18 +164,6 @@ cartItems.forEach(item => {
 });
 
 
-cartItemsContainer.addEventListener("click", function (event) {
-    if (event.target.closest(".delete-btn")) {
-        const cartItem = event.target.closest(".cart-item");
-        const itemName = cartItem.querySelector(".name").textContent.trim();
-    const updatedCart = cartItems.filter(item => item.name!==itemName);
-    localStorage.setItem("cart",JSON.stringify(updatedCart));
-    cartItem.remove();
-    console.log("Item removed from cart:",ItemName)
-}
-})
-
-
 document.addEventListener("DOMContentLoaded", function() {
     const cartItemsContainer = document.querySelector(".my-cart");
     const subtotalElement = document.querySelector(".subtotal span");
@@ -186,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
 
         let subtotal = cartItems.reduce((sum, item) => {
-            let itemPrice = parseFloat(item.price.replace("€", "").replace(",", ""));
+            let itemPrice = parseFloat(item.price.replace(/[^0-9,.]/g, "").replace(",", "."));
             return sum + itemPrice * item.quantity;
         }, 0);
 
@@ -197,35 +185,71 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-        let total = subtotal + shippingCost
+        let total = subtotal + shippingCost;
 
-        subtotalElement.textContent = '€${subtotal.toFixed(2)}'
-        totalElement.textContent = '€${total.toFixed(2)}'
+        subtotalElement.textContent = `€${subtotal.toFixed(2)}`;
+        totalElement.textContent = `€${total.toFixed(2)}`;
     }
 
     updateOrderSummary();
 
     shippingOptions.forEach(option => {
-        option.addEventListener("change",updateOrderSummary);
+        option.addEventListener("change", updateOrderSummary);
+    });
+
+    cartItemsContainer.addEventListener("click", function(event) {
+        if (event.target.closest(".delete-btn")) {
+            const cartItem = event.target.closest(".cart-item");
+
+            if (cartItem) {
+                const itemName = cartItem.querySelector(".name").textContent.trim();
+                let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+                const updatedCart = cartItems.filter(item => item.name !== itemName);
+
+                localStorage.setItem("cart", JSON.stringify(updatedCart));
+
+                cartItem.remove();
+
+                updateOrderSummary();
+
+                console.log("Item removed from cart:", itemName);
+            }
+        }
+    });
+
+   
+    cartItemsContainer.addEventListener("input", function(event) {
+        if (event.target.classList.contains("amt-box")) {
+            const cartItem = event.target.closest(".cart-item");
+            const itemName = cartItem.querySelector(".name").textContent.trim();
+            let newQuantity = parseInt(event.target.value);
+
+            if (newQuantity < 1) {
+                event.target.value = 1;
+                newQuantity = 1;
+            }
+
+            let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+            let itemIndex = cartItems.findIndex(item => item.name === itemName);
+
+            if (itemIndex !== -1) {
+                cartItems[itemIndex].quantity = newQuantity;
+                localStorage.setItem("cart", JSON.stringify(cartItems));
+                updateOrderSummary();
+            }
+        }
+    });
 });
 
-cartItemsContainer.addEventListener("click", function (event) {
-    if(event.target.closest(".delete-btn")){
-        const cartItem = event.target.closet(".cart-item");
-
-        let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-        const updatedCart = cartItems.filter(item =>item.name!==itemName);
-
-        localStorage.setItem("cart", JSON.stringify(updatedCart));
-
-        cartItem.remove();
-
-        updateOrderSummary();
-
-    
-    }
-}
 
 
-
+function showSidebar(){
+    const sidebar= document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+  }
+  
+  function hideSidebar() {
+    const sidebar= document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+  }
 
