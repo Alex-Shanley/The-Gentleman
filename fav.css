@@ -236,7 +236,7 @@
   color: #2b2e1a;
   font-size: 18px;
   cursor: pointer;
-  
+  max-width: 18px;
 }
 
 .remove-fav img {
