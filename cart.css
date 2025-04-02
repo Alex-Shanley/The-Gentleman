@@ -764,12 +764,41 @@ input[type="radio"]:checked::before {
       flex-direction: column;
       height: 75vh; 
       margin-top: 125px;
-      margin-top: 125px;
+      
       margin-bottom: 50px;
     }
+  }
+
+
+    @media screen and (max-width: 380px) {
+  
+
+  
+      .contact-us {
+      
+        margin-top: 140px;
+        
+        margin-bottom: 80px;
+      }
+
+
+      .Message {
+      
+        padding: 1rem;
+      
+      }
+
+      .form {
+        
+        padding: 1rem;
+       
+      }
 
 
   }
+
+
+
   .c-header h2 {
     position: relative;
     color: #262E19; ;
