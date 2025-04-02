@@ -978,9 +978,7 @@ nav .sidebar {
 }
 
 @media screen and (max-width: 576px) {
-  .best-sellers {
-    padding: 20px 10px;
-  }
+  
 
   .best-sellers .best-sellers-products-card img {
     height: 500px;
@@ -997,6 +995,21 @@ nav .sidebar {
   .best-sellers .nav {
     display: none;
   }
+  .best-sellers .hover-icons {
+    top: 5px;
+    right: 15px;
+  }
+
+  .best-sellers .icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .best-sellers .icon img {
+    width: 18px;
+    height: 18px;
+  }
+  
 }
 
 /* best sellers end */
