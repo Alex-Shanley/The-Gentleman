@@ -615,152 +615,140 @@ input[type="radio"]:checked::before {
     align-items: center;
     flex-direction: column;
     height: 75vh; 
-    margin-top: 80px;
     margin-top: 125px;
     margin-bottom: 50px;
-  }
-  
-  .cs-background h2  {
+}
+
+
+.cs-background h2 {
     color: #262E19;
     font-family: 'Literata', serif;
     font-size: 95px;
     font-weight: 300;
     text-align: center;
-  
-  }
-  
-  .cs-background h2 span {
-    color: #262E19;
+}
+
+.cs-background h2 span {
     font-size: 95px;
-    text-align: center;
     font-family: 'Great Vibes', cursive;
-    
-  }
-  
-  .cs-background h3 {
+}
+
+.cs-background h3 {
     font-size: 18px;
     text-align: center;
-    padding-top: 0px;
-  }
-  
-  .cs-tex {
+}
+
+
+.cs-tex {
     font-size: 14px;
     text-align: center;
-  }
-  
-  .cs-form {
+}
+
+
+.cs-form {
     width: 100%;
-    max-width: 1200px; 
-    height: auto;
-    margin: 40px 0; 
-  }
-  
-  .form {
+    max-width: 1200px;
+    margin: 40px 0;
+}
+
+.form, .Message {
     width: 100%;
     border: 2px solid #262E19;
     padding: 2rem;
     margin: 0.5rem 0;
     font-size: 1rem;
     background-color: #FFFBF2;
-  }
-  
-  .Message {
-    width: 100%;
-    border: 2px solid #262E19;
+}
+
+.Message {
     padding: 4rem;
-    margin: 0.5rem 0;
-    font-size: 1rem;
-    background-color: #FFFBF2;
-  }
-  
-  .cs-form form div {
+}
+
+
+.cs-form form div {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 0.8rem;
-  }
-  
-  .cs-btn {
+}
+
+
+.cs-btn {
     display: block;
     width: 100%;
-    padding: 35px;
+    padding: 20px; 
     background: #262E19;
     color: #ffffff;
     text-align: center;
     font-size: 16px;
     margin-top: 20px;
     cursor: pointer;
-    position: relative;
-    border: #262E19;
-  }
-  
-  .cs-btn::after {
+    border: 2px solid #262E19;
+}
+
+.cs-btn::after {
     content: "";
     display: block;
     width: 45%;
     height: 1px;
     background-color: #ffffff;
     margin: 5px auto 0;
-  }
-  
-  .cs-btn:hover {
+}
+
+.cs-btn:hover {
     background-color: #FFFBF2;
     color: #262E19;
-    border: 2px solid #262E19;
-  }
-  
-  @media screen and (max-width: 1100px) {
-    .contact-us  {
-      width: 90%;
-    
-     }
-  
-     .contact-us h2 {
-      font-size: 68px;
-     }
-   
-     .cs-background h2 span {
-       font-size: 68px;
-      }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .contact-us  {
-      width: 90%;
-    
-     }
-  
-     .contact-us h2 {
-      font-size: 68px;
-     }
-   
-     .cs-background h2 span {
-       font-size: 68px;
-      }
-  }
-  
-  @media screen and (max-width: 522px) {
-  
-    .contact-us  {
-      width: 90%;
-     }
-  
-    .contact-us h2 {
-     font-size: 48px;
-    }
-  
-    .cs-background h2 span {
-      font-size: 48px;
-     }
+}
 
-     .cs-tex {
-      font-size: 12px;
-      
+
+@media screen and (max-width: 1100px) {
+    .contact-us {
+        width: 90%;
     }
 
-    
+    .cs-background h2, .cs-background h2 span {
+        font-size: 68px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-us {
+        width: 90%;
+    }
+
+    .cs-background h2, .cs-background h2 span {
+        font-size: 60px;
+    }
+
+    .cs-form form div {
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media screen and (max-width: 522px) {
+    .contact-us {
+        width: 95%;
+    }
+
+    .cs-background h2, .cs-background h2 span {
+        font-size: 48px;
+    }
+
+    .cs-tex {
+        font-size: 12px;
+    }
+
+    .form, .Message {
+        padding: 1.5rem;
+    }
+
+    .cs-btn {
+        font-size: 14px;
+        padding: 15px; 
+    }
+}
 
 
-  }
+  
   .c-header h2 {
     position: relative;
     color: #262E19; ;
