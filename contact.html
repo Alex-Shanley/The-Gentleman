@@ -61,42 +61,38 @@
           <li><a href="cart.html">CART</a></li>
         </ul>
       </nav>
+  
+  
 
 
-    <section class="contact-us">
-
-      
-    
-    
-    <div class="cs-background">
-        
-    <h2>CONTACT<SPAN> US</SPAN></h2>
-    <div class="stroke">
-    <div></div>
-    <div></div>
-    <div></div>
-    </div>
-    <p class="cs-tex">
-        The Gentleman values refinement in both fashion and conversation. Send us a message, and let’s talk style.    </p>
-    </div>
-    <div class="cs-form">
-        <form>
-            
-            <div>
-                <input type = "text" class="form" placeholder="First Name">
-                <input type = "text" class="form" placeholder =" Last name">
+      <section class="contact-us">
+        <div class="cs-background">
+            <h2>CONTACT<SPAN> US</SPAN></h2>
+            <div class="stroke">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
-            <div>
-                <input type = "email" class="form" placeholder =" E-mail">
-                <input type ="text" class="form" placeholder="Phone">
-            </div>
-            <textarea rows = "5" placeholder="Message" class="Message"></textarea>
-            <input type = "submit" class="cs-btn" value ="SEND MESSAGE">
-            
-        </form>
+            <p class="cs-tex">
+                The Gentleman values refinement in both fashion and conversation. Send us a message, and let’s talk style.
+            </p>
         </div>
+    
+        <div class="cs-form">
+            <form id="contactForm">
+                <div>
+                    <input type="text" class="form" id="firstName" placeholder="First Name">
+                    <input type="text" class="form" id="lastName" placeholder="Last Name">
+                </div>
+                <div>
+                    <input type="email" class="form" id="email" placeholder="E-mail">
+                    <input type="text" class="form" id="phone" placeholder="Phone">
+                </div>
+                <textarea rows="5" class="form Message" id="message" placeholder="Message"></textarea>
+                <input type="submit" class="cs-btn" value="SEND MESSAGE">
+            </form>
         </div>
-        </section>
+    </section>
     
     <!--Contact End-->
     
@@ -108,7 +104,7 @@
     </div>
 
 
-
+    <script src="Gent.js"></script>
 
 
   </body>
