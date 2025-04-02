@@ -751,6 +751,15 @@ input[type="radio"]:checked::before {
     .cs-background h2 span {
       font-size: 48px;
      }
+
+     .cs-tex {
+      font-size: 12px;
+      
+    }
+
+    
+
+
   }
   .c-header h2 {
     position: relative;
