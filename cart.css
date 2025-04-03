@@ -416,7 +416,7 @@ input[type="radio"]:checked::before {
   }
   
   .page-header {
-    font-size: 12px
+    font-size: 10px
   }
 
    .cart-price {
