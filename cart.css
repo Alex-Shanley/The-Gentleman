@@ -615,8 +615,8 @@ input[type="radio"]:checked::before {
     align-items: center;
     flex-direction: column;
     height: 75vh; 
-    margin-top: 80px;
-    margin-top: 125px;
+    margin-top: 180px;
+    
     margin-bottom: 50px;
   }
   
