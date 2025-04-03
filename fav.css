@@ -310,7 +310,7 @@
 
 @media (max-width: 480px) {
   .fav-header {
-      font-size: 32px;
+      font-size: 48px;
   }
 
   .fav-item {
@@ -321,6 +321,9 @@
       width: 80px;
       height: 110px;
   }
+
+ 
+    
 
   .fav-details h3 {
       font-size: 14px;
