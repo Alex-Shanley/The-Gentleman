@@ -754,6 +754,11 @@ input[type="radio"]:checked::before {
       font-size: 12px;
       
     }
+    .Message {
+      
+      padding: 1rem;
+    
+    }
 
     .contact-us {
       
