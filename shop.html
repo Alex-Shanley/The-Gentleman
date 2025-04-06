@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Gentleman offers luxury menswear, combining timeless elegance, bespoke tailoring, and sophisticated style for the modern man.">
+    <meta name="keywords" content="Luxury menswear, timeless elegance, bespoke tailoring, and sophisticated style for the modern gentleman.">
+    <meta name="author" content="Alex Shanley">
+    <link rel="icon" type="image/png" href="Images/Favicon_.png">  
+    <title>The Gentleman</title>
+
+    <!--Css design file link-->
+    <link rel="stylesheet" href="shop.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <nav class="header">
+      <ul>
+        <li class="logo">
+          <a href="index.html">
+            <img src="Images/Nav logo.svg" class="logo-image" alt="The Gentleman Logo">
+          </a>
+        </li>
+        <li class="hideOnMobile"><a href="index.html">HOME</a></li>
+        <li class="hideOnMobile"><a href="contact.html">CONTACT</a></li>
+        <li class="hideOnMobile"><a href="shop.html">SHOP</a></li>
+        <li class="hideOnMobile"><a href="Favourites.html">FAVOURITES</a></li>
+        <li class="hideOnMobile"><a href="cart.html">CART</a></li>
+        <li class="menu-button" onclick="showSidebar()">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+              <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+  
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+            </svg>
+          </a>
+        </li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="shop.html">SHOP</a></li>
+        <li><a href="Favourites.html">FAVOURITES</a></li>
+        <li><a href="cart.html">CART</a></li>
+      </ul>
+    </nav>
+
+    <!--SHOP Section-->
+    <div class="shop-container">
+      <aside class="filters">
+        <h2>SHOP</h2>
+        <div class="filter-group">
+          <div class="filter">
+            
+          
+       
+            <div class="filter">
+              <hr>
+              <p>SEASONS</p>
+              <label class="colour-option">
+                <input type="radio" name="season" value="all" checked> ALL SEASONS
+            </label>
+              <label class="colour-option">
+                  <input type="radio" name="season" value="summer"> SUMMER
+              </label>
+              <label class="colour-option">
+                  <input type="radio" name="season" value="winter"> WINTER
+              </label>
+              <label class="colour-option">
+                  <input type="radio" name="season" value="autumn"> AUTUMN
+              </label>
+             
+          </div>
+          
+
+
+          </div>
+          <hr>
+          <div class="filter">
+            <p>COLOUR</p>
+            
+            <label class="colour-option">
+              <input type="radio" name="color" value="All"> ALL
+            </label>
+              
+              <label class="colour-option">
+                <input type="radio" name="color" value="black"> BLACK
+              </label>
+              <label class="colour-option">
+                <input type="radio" name="color" value="dark navy">DARK NAVY
+              </label>
+              <label class="colour-option">
+                <input type="radio" name="color" value="blue"> BLUE
+              </label>
+
+              <label class="colour-option">
+                <input type="radio" name="color" value="beige"> BEIGE
+              </label>
+
+              <label class="colour-option">
+                <input type="radio" name="color" value="green"> GREEN
+              </label>
+          
+          
+            <hr>
+          </div>
+          <div class="filter">
+            <p>PRICE</p>
+            <input type="range" id="price-slider" min="550" max="4950" value="2000" class="price-slider" style="accent-color: #262E19;" />
+            <p class="price-label" id="price-range">€550.00 - €4950.00</p>
+          </div>
+        </div>
+      </aside>
+
+      <section class="whats-new">
+        <div class="carousel">
+          <div class="whats-new-products" id="product-list">
+            
+
+
+            <div class="whats-new-products-card" slider-price="4950"  color="black" season="winter">
+              <div class="product-image-container">
+                <img src="Images/Hand-Tailored Wool-Cashmere Topcoat.png" alt="Hand-Tailored Wool-Cashmere Topcoat">
+                <div class="hover-icons">
+                  <span class="icon"><img src="Images/Shopping bag.svg" alt="bag"></span> 
+                  <span class="icon"><img src="Images/Star.svg" alt="star"></span> 
+                </div>
+              </div>
+              <p class="product-name">Hand-Tailored Wool-Cashmere Topcoat</p>
+              <p class="product-price">€4950.00</p>
+            </div>
+
+            <div class="whats-new-products-card" slider-price="550" color="blue" season="summer">
+              <div class="product-image-container">
+                <img src="Images/Washed Chambray Shirt.png" alt="Washed Chambray Shirt">
+                <div class="hover-icons">
+                  <span class="icon"><img src="Images/Shopping bag.svg" alt="bag"></span> 
+                  <span class="icon"><img src="Images/Star.svg" alt="star"></span>
+                </div>
+              </div>
+              <p class="product-name">Washed Chambray Shirt</p>
+              <p class="product-price">€550.00</p>
+            </div>
+
+            <div class="whats-new-products-card" slider-price="2750"  color="dark navy" season="winter">
+              <div class="product-image-container">
+                <img src="Images/Carleton Quilted Down Jacket.png" alt="Carleton Quilted Down Jacket">
+                <div class="hover-icons">
+                  <span class="icon"><img src="Images/Shopping bag.svg" alt="bag"></span> 
+                  <span class="icon"><img src="Images/Star.svg" alt="star"></span>
+                </div>
+              </div>
+              <p class="product-name">Carleton Quilted Down Jacket</p>
+              <p class="product-price">€2750.00</p>
+            </div>
+
+            <div class="whats-new-products-card" slider-price="3950" color="beige" season="winter">
+              <div class="product-image-container">
+                <img src="Images/Hand-Tailored Cashmere-Wool Topcoat.png" alt="Hand-Tailored Cashmere-Wool Topcoat">
+                <div class="hover-icons">
+                  <span class="icon"><img src="Images/Shopping bag.svg" alt="bag"></span> 
+                  <span class="icon"><img src="Images/Star.svg" alt="star"></span>
+                </div>
+              </div>
+              <p class="product-name">Hand-Tailored Cashmere-Wool Topcoat</p>
+              <p class="product-price">€3950.00</p>
+            </div>
+
+            <div class="whats-new-products-card" slider-price="2750" color="green" season="autumn">
+              <div class="product-image-container">
+                <img src="Images/Johnson Twill Four-Pocket Jacket.png" alt="Johnson Twill Four-Pocket Jacket">
+                <div class="hover-icons">
+                  <span class="icon"><img src="Images/Shopping bag.svg" alt="bag"></span> 
+                  <span class="icon"><img src="Images/Star.svg" alt="star"></span>
+                </div>
+              </div>
+              <p class="product-name">Johnson Twill Four-Pocket Jacket</p>
+              <p class="product-price">€2750.00</p>
+            </div>
+
+            <div class="whats-new-products-card" slider-price="1550"color="beige" season="autumn">
+              <div class="product-image-container">
+                <img src="Images/Wool-Cashmere Cardigan.png" alt="Wool-Cashmere Cardigan">
+                <div class="hover-icons">
+                  <span class="icon"><img src="Images/Shopping bag.svg" alt="bag"></span> 
+                  <span class="icon"><img src="Images/Star.svg" alt="star"></span>
+                </div>
+              </div>
+              <p class="product-name">Wool-Cashmere Cardigan</p>
+              <p class="product-price">€1550.00</p>
+            </div>
+
+
+
+            <div class="whats-new-products-card" slider-price="4950" season="summer">
+              <div class="product-image-container">
+                <img src="Images/Kent Handmade Paisley Silk Jacket.png" alt="Johnson Twill Four-Pocket Jacket">
+                <div class="hover-icons">
+                  <span class="icon"><img src="Images/Shopping bag.svg" alt="bag"></span> 
+                  <span class="icon"><img src="Images/Star.svg" alt="star"></span>
+                </div>
+              </div>
+              <p class="product-name">Kent Handmade Paisley Silk Jacket</p>
+              <p class="product-price">€4950.00</p>
+            </div>
+
+
+            <div class="whats-new-products-card" slider-price="2750" color="dark navy" season="autumn">
+              <div class="product-image-container">
+                <img src="Images/Hand-Tailored Linen-Blend Jacket.png" alt="Johnson Twill Four-Pocket Jacket">
+                <div class="hover-icons">
+                  <span class="icon"><img src="Images/Shopping bag.svg" alt="bag"></span> 
+                  <span class="icon"><img src="Images/Star.svg" alt="star"></span>
+                </div>
+              </div>
+              <p class="product-name">Hand-Tailored Linen-Blend Jacket</p>
+              <p class="product-price">€2750.00</p>
+            </div>
+
+
+            <div class="whats-new-products-card" slider-price="2750" color="dark navy" season="autumn">
+              <div class="product-image-container">
+                <img src="Images/Jeffries Stretch Waistcoat.png" alt="Johnson Twill Four-Pocket Jacket">
+                <div class="hover-icons">
+                  <span class="icon"><img src="Images/Shopping bag.svg" alt="bag"></span> 
+                  <span class="icon"><img src="Images/Star.svg" alt="star"></span>
+                </div>
+              </div>
+              <p class="product-name">Jeffries Stretch Waistcoat</p>
+              <p class="product-price">€2750.00</p>
+            </div>
+
+
+
+
+            <div class="whats-new-products-card" slider-price="3950" color="dark navy" season="winter">
+              <div class="product-image-container">
+                <img src="Images/Fullerton Wool-Cashmere Peacoat .png" alt="Johnson Twill Four-Pocket Jacket">
+                <div class="hover-icons">
+                  <span class="icon"><img src="Images/Shopping bag.svg" alt="bag"></span> 
+                  <span class="icon"><img src="Images/Star.svg" alt="star"></span>
+                </div>
+              </div>
+              <p class="product-name">Fullerton Wool-Cashmere Peacoat</p>
+              <p class="product-price">€3950.00</p>
+            </div>
+
+
+            <div class="whats-new-products-card" slider-price="2950" color="dark navy" season="winter">
+              <div class="product-image-container">
+                <img src="Images/Suede-Front Cashmere Cardigan.png" alt="Johnson Twill Four-Pocket Jacket">
+                <div class="hover-icons">
+                  <span class="icon"><img src="Images/Shopping bag.svg" alt="bag"></span> 
+                  <span class="icon"><img src="Images/Star.svg" alt="star"></span>
+                </div>
+              </div>
+              <p class="product-name">Suede-Front Cashmere Cardigan</p>
+              <p class="product-price">€2950.00</p>
+            </div>
+
+
+            <div class="whats-new-products-card" slider-price="1750" color="dark navy" season="winter">
+              <div class="product-image-container">
+                <img src="Images/Carleton Quilted Down Gilet.png" alt="Johnson Twill Four-Pocket Jacket">
+                <div class="hover-icons">
+                  <span class="icon"><img src="Images/Shopping bag.svg" alt="bag"></span> 
+                  <span class="icon"><img src="Images/Star.svg" alt="star"></span>
+                </div>
+              </div>
+              <p class="product-name">Carleton Quilted Down Gilet</p>
+              <p class="product-price">€1750.00</p>
+            </div>
+
+
+
+          </div>
+        </div>
+
+        <div class="nav">
+          <button class="left-btn">&#10094;</button>
+          <p class="counter">1 of 5 </p> 
+          <button class="right-btn">&#10095;</button>
+        </div>
+      </section>
+    </div>
+    
+    <section class="questions" id="questions">
+      <video autoplay muted loop class="questions-background">
+        <source src="Images/Contact us video.mp4" type="video/mp4">
+      </video>
+    
+      <div class="content">
+        <h1><span>Contact</span> Us</h1>
+        <p>Should you have any inquiries or wish to explore our latest collections, we are at your service. Reach out, and allow us to assist you in tailoring your experience to perfection.</p>
+        <a href="contact.html" class="btn">Contact Us</a>
+      </div>
+    </section>
+
+
+    
+    <script src="Gent.js"></script>
+
+
+    
+    <script>
+      const priceSlider = document.getElementById('price-slider');
+      const priceRangeLabel = document.getElementById('price-range');
+      const productList = document.getElementById('product-list');
+    
+      priceSlider.addEventListener('input', function() {
+        const priceValue = priceSlider.value;
+        priceRangeLabel.textContent = `€550.00 - €${priceValue}.00`;
+    
+        const products = productList.querySelectorAll('.whats-new-products-card');
+        products.forEach(product => {
+          const productPrice = parseFloat(product.getAttribute('slider-price'));
+          if (productPrice <= priceValue) {
+            product.style.display = 'block'; 
+          } else {
+            product.style.display = 'none'; 
+          }
+        });
+      });
+    
+     
+      const colorOptions = document.querySelectorAll('input[name="color"]');
+    
+      function filterByColor() {
+        const selectedColor = document.querySelector('input[name="color"]:checked').value;
+    
+        const productCards = document.querySelectorAll('.whats-new-products-card');
+        productCards.forEach(card => {
+          const productColor = card.getAttribute('color');
+          if (selectedColor === 'All' || productColor === selectedColor) {
+            card.style.display = 'block'; 
+          } else {
+            card.style.display = 'none'; 
+          }
+        });
+      }
+    
+      colorOptions.forEach(option => {
+        option.addEventListener('change', filterByColor);
+      });
+    
+     
+      const seasonOptions = document.querySelectorAll('input[name="season"]');
+    
+      function filterBySeason() {
+        const selectedSeason = document.querySelector('input[name="season"]:checked').value;
+    
+        const productCards = document.querySelectorAll('.whats-new-products-card');
+        productCards.forEach(card => {
+          const productSeason = card.getAttribute('season');
+          if (selectedSeason === 'all' || productSeason === selectedSeason) {
+            card.style.display = 'block'; 
+          } else {
+            card.style.display = 'none'; 
+          }
+        });
+      }
+    
+      seasonOptions.forEach(option => {
+        option.addEventListener('change', filterBySeason);
+      });
+    
+      
+      function applyFilters() {
+        filterByColor();
+        filterBySeason();
+      }
+    
+      applyFilters();
+    
+    </script>
+    
+
+  
+
+
+
+
+
+
+
+    
+  </body>
+</html>
