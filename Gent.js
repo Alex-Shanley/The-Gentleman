@@ -256,3 +256,16 @@ function showSidebar(){
 
  
 
+function messageSent(event) {
+    event.preventDefault();
+
+    const firstName=document.getElementById('firstName').value;
+    const lastName=document.getElementById('lastName').value;
+
+
+    const notificationMessage = `Thank you for reaching out to the Gentleman, ${firstName} ${lastName}, Your message has been sent successfully.`;
+
+    alert(notificationMessage);
+
+    document.getElementById('contactForm').reset();
+}
